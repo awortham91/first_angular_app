@@ -5,6 +5,29 @@
  */
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+
+.users_index_title {
+  font-size: 30px;
+  font-family: "Times New Roman", Times, serif;
+  background: #666666;
+  color: #E6E6E6;
+  width:40%;
+  margin: auto;
+  text-align: center;
+}
+
+.users_index_list {
+  text-align: center;
+  border: 5px dashed #666666;
+  border-top: 0px solid white;
+  width: 40%;
+  display:block;
+  margin: auto !important;
+  color: #666666;
+  padding-top: 15px;
+}
+
 .notes_new_title {
   font-family: "Times New Roman", Times, serif;
   font-size: 30px;
