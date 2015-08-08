@@ -2,12 +2,12 @@ var _ = require('lodash');
 var Category = require('./category')
 var User = require('./user')
 var notes = [
-  {"id":1 ,"userId": 1, "categoryId": 3, "description": "To be or not to be", "content" : "is it better to live or die?", "title" : "1"},
-  {"id":2 ,"userId": 1, "categoryId" : 4, "description" : "That is the question", "title" : "2", "content": "just to clarify the fact that the question was a question"},
-  {"id":3 ,"userId": 1, "categoryId": 3, "description" : "Whether 'tis nobler in the mind", "title" : "3","content": "is it a bolder act"},
-  {"id":4 ,"userId": 1, "categoryId": 1, "description" : "to suffer the slings and arrows", "title" : "4", "content": "to eat life's shit all the time"},
-  {"id":5 ,"userId": 1, "categoryId": 1, "description" : "of outrageous fortune or to take arms", "title" : "5", "content": "or being unlcky to fight"},
-  {"id":6 ,"userId": 1, "categoryId": 2, "description" : "against a sea of troubles and by opposing end them", "content" : "violently versus the unluck by ending your own life.", "title" : "6"}
+  {"id":1 ,"userId": 1, "categoryId": 3, "description": "To be or not to be", "content" : "is it better to live or die?", "title" : "to be 1"},
+  {"id":2 ,"userId": 1, "categoryId" : 4, "description" : "That is the question", "title" : "to be 2", "content": "just to clarify the fact that the question was a question"},
+  {"id":3 ,"userId": 1, "categoryId": 3, "description" : "Whether 'tis nobler in the mind", "title" : "to be 3","content": "is it a bolder act"},
+  {"id":4 ,"userId": 1, "categoryId": 1, "description" : "to suffer the slings and arrows", "title" : "to be 4", "content": "to eat life's shit all the time"},
+  {"id":5 ,"userId": 1, "categoryId": 1, "description" : "of outrageous fortune or to take arms", "title" : "to be 5", "content": "or being unlcky to fight"},
+  {"id":6 ,"userId": 1, "categoryId": 2, "description" : "against a sea of troubles and by opposing end them", "content" : "violently versus the unluck by ending your own life.", "title" : "to be 6"}
 ]
 var lastId = 6;
 

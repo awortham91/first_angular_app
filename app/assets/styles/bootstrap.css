@@ -22,12 +22,26 @@
   margin: auto;
   width: 60%;
   background: #CCCCCC;
+  padding-left: 5px;
+}
+
+.notes_show_buttons {
+  display:block;
+  margin: auto;
+  width: 60%;
+  text-align:center;
+  padding-right: 25%;
 }
 
 .note_index_box {
   display: block;
   width:50%;
   margin:auto;
+}
+
+.notes_index_title {
+  text-align: center;
+  color: #B2B2B2;
 }
 
 .index_notes {
@@ -4760,7 +4774,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   font-size: 75%;
   font-weight: bold;
   line-height: 1;
-  color: #fff;
+  color: #CCCCCC;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -4801,7 +4815,7 @@ a.label:focus {
   background-color: #449d44;
 }
 .label-info {
-  background-color: #5bc0de;
+  background-color: #4C4C4C;
 }
 .label-info[href]:hover,
 .label-info[href]:focus {

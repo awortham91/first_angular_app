@@ -1,3 +1,7 @@
 angular.module('Fun').factory('Note', function($resource){
-  return $resource('/notes/:id');
+  return $resource('/notes/:id', {id: "@id"}, {
+    update: {
+      method: "PUT"
+    }
+  });
 });
