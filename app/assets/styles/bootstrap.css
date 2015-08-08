@@ -5,6 +5,35 @@
  */
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+.notes_show_quote_box {
+  padding-left: 20px;
+}
+
+.notes_show_title {
+  font-size: 30px;
+  background: linear-gradient(#E6E6E6, #FFFFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.notes_show_full {
+  display:block;
+  margin: auto;
+  width: 60%;
+  background: #CCCCCC;
+}
+
+.note_index_box {
+  display: block;
+  width:50%;
+  margin:auto;
+}
+
+.index_notes {
+  background: #E6E6E6;
+}
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;

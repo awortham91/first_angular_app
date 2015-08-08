@@ -1,1 +1,10 @@
-<h1>index</h1>
+
+<div class="row">
+  <h1 class="text-center">Shakespeare bits</h1>
+  <div class="note_index_box">
+    <div ng-repeat="note in notes" class="index_notes">
+    <p><a ng-href="#/notes/{{note.id}}">{{note.title}}</a></p>
+    <p>{{note.description}}</p>
+    </div>
+  </div>
+</div>
