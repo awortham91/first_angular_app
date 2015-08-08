@@ -1,19 +1,30 @@
-<h1>Edit: {{note.title}}</h1>
-<form>
+<div class="notes_show_title">{{note.title}}</div>
+<div class="notes_show_full">
+  <div class="page-header">
+    <p class="notes_show_content">{{note.description}}</p>
+    <small>{{note.user.name}}</small>
+    <div class="notes_show_quote_box">
+      <p>{{note.content}}</p>
+      <p><span class="label label-info">{{note.category.name}}</span></p>
+    </div>
+  </div>
+</div>
+
+<form class="notes_edit_form">
   <fieldset class="form-group">
     <label for="title">Title</label>
-    <input class= "form-control" type="text" id="title" name="title" ng-model="note.title">
+    <input class= "form-control notes_edit_input" type="text" id="title" name="title" ng-model="note.title">
   </fieldset>
 
   <fieldset class="form-group">
-    <label for="title">Description</label>
-    <textarea class= "form-control" type="text" id="description" name="description" ng-model="note.description"></textarea>
+    <label for="title">Quote</label>
+    <textarea class= "form-control notes_edit_input" type="text" id="description" name="description" ng-model="note.description"></textarea>
   </fieldset>
 
   <fieldset class="form-group">
     <label for="content">Content</label>
-    <textarea class= "form-control" type="text" id="content" name="content" ng-model="note.content"></textarea>
+    <textarea class= "form-control notes_edit_input" type="text" id="content" name="content" ng-model="note.content"></textarea>
   </fieldset>
 
-  <input type="submit" class="btn btn-default" ng-click="saveNote(note)" ng-disabled="isSubmitting">
+  <input type="submit" value="{{isSubmitting ? 'Saving...' : 'Save'}}" class="btn btn-default" ng-click="saveNote(note)" ng-disabled="isSubmitting">
 </form>
