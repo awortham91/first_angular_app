@@ -7,6 +7,7 @@
     <div ng-repeat="note in notes" class="index_notes">
     <p><a ng-href="#/notes/{{note.id}}">{{note.title}}</a></p>
     <p>{{note.description}}</p>
+    <p><span class='label label-info'>{{note.category.name}}</span></p>
     </div>
   </div>
 </div>

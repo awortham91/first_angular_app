@@ -26,5 +26,10 @@
     <textarea class= "form-control notes_edit_input" type="text" id="content" name="content" ng-model="note.content"></textarea>
   </fieldset>
 
+  <fieldset class="form-group">
+    <label for="category">Category</label>
+    <select ng-option="categroy.id as category.name for category in categories"></select>
+  </fieldset>
+
   <input type="submit" value="{{isSubmitting ? 'Saving...' : 'Save'}}" class="btn btn-default" ng-click="saveNote(note)" ng-disabled="isSubmitting">
 </form>
