@@ -17,7 +17,7 @@
   </fieldset>
 
   <fieldset class="form-group">
-    <label for="title">Quote</label>
+    <label for="description">Quote</label>
     <textarea class= "form-control notes_edit_input" type="text" id="description" name="description" ng-model="note.description"></textarea>
   </fieldset>
 
@@ -28,7 +28,7 @@
 
   <fieldset class="form-group">
     <label for="category">Category</label>
-    <select ng-option="categroy.id as category.name for category in categories"></select>
+    <select ng-options="category.id as category.name for category in categories" ng-model="note.categoryId"></select>
   </fieldset>
 
   <input type="submit" value="{{isSubmitting ? 'Saving...' : 'Save'}}" class="btn btn-default" ng-click="saveNote(note)" ng-disabled="isSubmitting">

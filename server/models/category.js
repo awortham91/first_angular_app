@@ -5,10 +5,10 @@ var categories = [
   {"id": 2, "name": "Depressing"},
   {"id": 3, "name": "So totally Shakespeare"},
   {"id": 4, "name": "Boring"},
-  {"id": 5, "name": "Use with Caution"},
-  {"id": 6, "name": "Question"},
-  {"id": 7, "name": "Best Practice"},
-  {"id": 8, "name": "Code Snippet"}
+  {"id": 5, "name": "Romantic"},
+  {"id": 6, "name": "Witty"},
+  {"id": 7, "name": "Strange"},
+  {"id": 8, "name": "Random"}
 ]
 
 module.exports = {
