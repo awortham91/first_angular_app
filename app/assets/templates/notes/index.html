@@ -1,10 +1,12 @@
+<fun-category-selector ng-model="search.category"></fun-category-selector>
+
 <div class="notes_index_new_button">
   <a class= "btn btn-default" href="#/notes/new">New Note</a>
 </div>
 <div class="row">
-  <h1 class="notes_index_title">Shakespeare bits</h1>
+  <h1 class="notes_index_title">Shakesbits</h1>
   <div class="note_index_box">
-    <div ng-repeat="note in notes" class="index_notes">
+    <div ng-repeat="note in notes | categoryFilter:search.category" class="index_notes">
     <p><a ng-href="#/notes/{{note.id}}">{{note.title}}</a></p>
     <p>{{note.description}}</p>
 
