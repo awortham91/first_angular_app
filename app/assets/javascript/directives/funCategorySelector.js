@@ -18,7 +18,7 @@ angular.module('Fun').directive('funCategorySelector', function(Category){
         } else {
           activeCategory = category;
         }
-        ngModelCtrl.$setViewValue(category);
+        ngModelCtrl.$setViewValue(activeCategory);
       }
       ngModelCtrl.$render = function(){
         activeCategory = ngModelCtrl.$viewValue

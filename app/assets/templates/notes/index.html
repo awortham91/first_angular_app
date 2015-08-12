@@ -1,4 +1,9 @@
-<fun-category-selector ng-model="search.category"></fun-category-selector>
+<div class="form-group zero-clipboard index_search_bar_div">
+  <span class="btn-clipboard notes_index_search_bar">Search: <input type-"text" ng-model="search.input"></span>
+  <fun-category-selector ng-model="search.category"></fun-category-selector>
+</div>
+
+
 
 <div class="notes_index_new_button">
   <a class= "btn btn-default" href="#/notes/new">New Note</a>
@@ -6,7 +11,7 @@
 <div class="row">
   <h1 class="notes_index_title">Shakesbits</h1>
   <div class="note_index_box">
-    <div ng-repeat="note in notes | categoryFilter:search.category" class="index_notes">
+    <div ng-repeat="note in notes | categoryFilter:search.category | filter:search.input" class="index_notes">
     <p><a ng-href="#/notes/{{note.id}}">{{note.title}}</a></p>
     <p>{{note.description}}</p>
 

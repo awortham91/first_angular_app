@@ -14,6 +14,7 @@
   color: #E6E6E6;
   width:40%;
   margin: auto;
+  margin-top: 25px;
   text-align: center;
 }
 
@@ -98,6 +99,23 @@
   display: block;
   width:50%;
   margin:auto;
+}
+
+.index_search_bar_div {
+  border-bottom: 2px solid #E6E6E6;
+  border-left: 2px solid #E6E6E6;
+  border-right: 2px solid #E6E6E6;
+  padding-left: 3px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-bottom: 5px;
+  display: block;
+  padding-bottom: 2px;
+  background: #FFE6E6;
+}
+
+.notes_index_search_bar {
+  margin-right: 10%;
 }
 
 .notes_index_title {
@@ -4179,7 +4197,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 20px;
   border: 1px solid transparent;
 }
 @media (min-width: 768px) {
