@@ -31,5 +31,10 @@
     <select ng-options="category.id as category.name for category in categories" ng-model="note.categoryId"></select>
   </fieldset>
 
+  <fieldset class="form-group">
+    <label for="user">Author</label>
+    <select ng-options="user.id as user.name for user in users" ng-model="note.userId"></select>
+  </fieldset>
+
   <input type="submit" value="{{isSubmitting ? 'Saving...' : 'Save'}}" class="btn btn-default" ng-click="saveNote(note)" ng-disabled="isSubmitting">
 </form>

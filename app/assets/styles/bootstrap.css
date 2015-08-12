@@ -114,6 +114,23 @@ margin:auto;
 
 .index_notes {
   background: #E6E6E6;
+  padding: 3px;
+  padding-left: 7px;
+  margin: 7px;
+  margin-bottom: 3px;
+  border-bottom: 1px solid red;
+  border-radius: 5px;
+}
+
+.notes_index_bottom_line {
+  padding-bottom: -4px;
+  display:block;
+  width: 25%;
+  float: left;
+}
+
+.notes_index_author {
+  margin-left: 20%;
 }
 
 html {

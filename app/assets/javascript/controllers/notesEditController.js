@@ -1,7 +1,8 @@
-angular.module('Fun').controller('NotesEditController', function(Note, $scope, Category, $location, $routeParams){
+angular.module('Fun').controller('NotesEditController', function($scope, Note, User, Category, $location, $routeParams){
   $scope.note = Note.get({id: $routeParams.id})
   $scope.isSubmitting = false;
   $scope.categories = Category.query();
+  $scope.users = User.query()
 
   $scope.saveNote = function(note){
     document.body.style.backgroundColor = "#D6FFD6";
