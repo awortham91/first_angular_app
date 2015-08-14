@@ -6,6 +6,19 @@
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 
+.memory_index_wrapper {
+    width:80%;
+    margin: auto;
+}
+
+.memory_index_box {
+  text-align: center;
+}
+
+.memory_index_card {
+  border: 1px solid red;
+  min-height: 100px !important;
+}
 
 .users_index_title {
   font-size: 30px;
