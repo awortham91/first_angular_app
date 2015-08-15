@@ -2,19 +2,27 @@ angular.module('Fun').controller('MemoryIndexController', function(User, Note, $
   $scope.users = User.query();
   $scope.notes = Note.query();
   $scope.toggled = false;
+  $scope.ready = false;
 
-//   function toggleTime(card) {
-//     console.log('hi')
-//     // if($scope.toggled = false) {
-//     //   $scope.toggled
-//     //   console.log(card)
-//     // }
-//   }
-// });
+  $scope.toggleTime = function(cards) {
+    if(!$scope.toggled){
+      var card = Note.get({id: cards}, function() {
+        document.getElementById(cards).innerHTML = card["description"]
+        $scope.toggled = true;
+      });
+    } else if($scope.toggled && !$scope.ready) {
+      var card = Note.get({id: cards}, function() {
+        document.getElementById(cards).innerHTML = card["description"]
+        $scope.ready = true;
+      });
+    } else {
+      x = document.getElementsByClassName("memory_index_card_quote")
+      for (var i = 0, len = x.length; i < len; i++) {
+        x[i].innerHTML = "pick me!"
+      }
 
-
-    $scope.toggleTime = function(card) {
-         console.log('Hello ' + card);
+      $scope.toggled = false;
+      $scope.ready = false;
     }
-
+  }
 });

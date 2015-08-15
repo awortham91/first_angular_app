@@ -13,11 +13,18 @@
 
 .memory_index_box {
   text-align: center;
+  background-color: #CCCCCC;
 }
 
 .memory_index_card {
   border: 1px solid red;
   min-height: 100px !important;
+  background-color: white;
+}
+
+.memory_index_card:hover {
+  color: red;
+   opacity: .5;
 }
 
 .users_index_title {
