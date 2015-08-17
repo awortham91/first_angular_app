@@ -34,7 +34,14 @@ angular.module('Fun').controller('MemoryIndexController', function(User, Note, $
         if(checkForCards(card.id)){
           document.getElementById(cards).innerHTML = card["description"]
           $scope.ready = true;
-          var firstCard = Note.get({id: cards}
+          var firstCard = Note.get({id: chosenCards[0]}, function() {
+            if(card.user.id === firstCard.user.id){
+              matchedCards.push(card.id)
+              matchedCards.push(firstCard.id)
+              document.getElementById(card.id).className = "memory_index_correct";
+              document.getElementById(firstCard.id).className = "memory_index_corrct";
+            }
+          });
           chosenCards = []
         };
       });
