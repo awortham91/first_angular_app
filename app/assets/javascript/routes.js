@@ -27,4 +27,8 @@ angular.module('Fun').config(function($routeProvider){
       templateUrl: "assets/templates/users/show.html",
       controller: "UsersShowController"
     })
+    .when('/memory',{
+      templateUrl: "assets/templates/memory/index.html",
+      controller: "MemoryIndexController"
+    })
 });
