@@ -9,11 +9,13 @@ angular.module('Fun').controller('MemoryIndexController', function(User, Note, $
   function checkForCards(noteId){
     for (var i = 0, len = chosenCards.length; i < len; i++) {
       if (chosenCards[i] === noteId) {
+        console.log('chosencards error')
           return false;
       };
     };
-    for (var i = 0, len = chosenCards.length; i < len; i++) {
+    for (var i = 0, len = matchedCards.length; i < len; i++) {
       if (matchedCards[i] === noteId) {
+        console.log('matchedcards error')
           return false;
       };
     };
@@ -41,7 +43,7 @@ angular.module('Fun').controller('MemoryIndexController', function(User, Note, $
               matchedCards.push(card.id)
               matchedCards.push(firstCard.id)
               document.getElementById(card.id).className = "memory_index_correct";
-              document.getElementById(firstCard.id).className = "memory_index_corrct";
+              document.getElementById(firstCard.id).className = "memory_index_correct";
               $scope.toggled = false;
               $scope.ready = false;
             }
