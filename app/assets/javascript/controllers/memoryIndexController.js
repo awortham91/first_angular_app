@@ -6,6 +6,11 @@ angular.module('Fun').controller('MemoryIndexController', function(User, Note, $
   var chosenCards = []
   var matchedCards = []
 
+  function makeAllFalse() {
+    $scope.toggled = false;
+    $scope.ready = false;
+  }
+
   function checkForCards(noteId){
     for (var i = 0, len = chosenCards.length; i < len; i++) {
       if (chosenCards[i] === noteId) {
@@ -44,8 +49,19 @@ angular.module('Fun').controller('MemoryIndexController', function(User, Note, $
               matchedCards.push(firstCard.id)
               document.getElementById(card.id).className = "memory_index_correct";
               document.getElementById(firstCard.id).className = "memory_index_correct";
-              $scope.toggled = false;
-              $scope.ready = false;
+              document.getElementById("memory_index_card_" + card.id).className = "col-md-3 memory_index_card_correct";
+              document.getElementById("memory_index_card_" + firstCard.id).className = "col-md-3 memory_index_card_correct";
+              makeAllFalse()
+            } else {
+              x = document.getElementsByClassName("memory_index_card")
+              for (var i = 0, len = x.length; i < len; i++) {
+                x[i].style.opacity = "0.5";
+              }
+              x = document.getElementsByClassName("memory_index_card_correct")
+              for (var i = 0, len = x.length; i < len; i++) {
+                x[i].style.opacity = "0.5";
+              }
+              document.getElementById("memory_index_continue").style.visibility = "visible";
             }
           });
           chosenCards = []
@@ -57,9 +73,16 @@ angular.module('Fun').controller('MemoryIndexController', function(User, Note, $
       for (var i = 0, len = x.length; i < len; i++) {
         x[i].innerHTML = "pick me!"
       }
-
-      $scope.toggled = false;
-      $scope.ready = false;
+      x = document.getElementsByClassName("memory_index_card")
+      for (var i = 0, len = x.length; i < len; i++) {
+        x[i].style.opacity = "1";
+      }
+      x = document.getElementsByClassName("memory_index_card_correct")
+      for (var i = 0, len = x.length; i < len; i++) {
+        x[i].style.opacity = "1";
+      }
+      document.getElementById("memory_index_continue").style.visibility = "hidden";
+      makeAllFalse()
     }
   }
 });

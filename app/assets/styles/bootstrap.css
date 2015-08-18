@@ -5,14 +5,33 @@
  */
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+#memory_index_continue {
+  visibility: hidden;
+  text-align: center;
+  font-size: 30px;
+  background: #FFE6E6;
+  border-radius: 50px;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.memory_index_card_correct {
+  border: 1px solid red;
+  min-height: 100px !important;
+  background-color: #666666;
+  box-shadow: 0px 0px 10px black inset;
+}
 
 .memory_index_correct{
-  background-color: green;
+  text-shadow: 0px 5px 15px #D1FFD1;
+  vertical-align: center;
+  color: #CCCCCC;
 }
 
 .memory_index_title {
   font-size: 40px;
-  color: #CCCCCC;
+  color: #999999;
   text-align: center;
   border: 1px solid black;
   width: 33%;
@@ -36,11 +55,12 @@
   border: 1px solid red;
   min-height: 100px !important;
   background-color: white;
+  color: #666666;
 }
 
 .memory_index_card:hover {
   color: red;
-   opacity: .5;
+  opacity: .5;
 }
 
 .users_index_title {

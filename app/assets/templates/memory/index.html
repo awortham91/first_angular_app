@@ -1,6 +1,7 @@
 <p class="memory_index_title">memory</p>
+<p id="memory_index_continue">Click any box continue!</p>
 <div class="memory_index_wrapper">
 <div class="row memory_index_box">
-  <div class="col-md-3 memory_index_card" ng-repeat="note in notes" ng-click="toggleTime(note.id)"><span class="memory_index_card_quote" id="{{note.id}}">pick me!</span></div>
+  <div class="col-md-3 memory_index_card" id="memory_index_card_{{note.id}}" ng-repeat="note in notes" ng-click="toggleTime(note.id)"><span class="memory_index_card_quote" id="{{note.id}}">pick me!</span></div>
 </div>
 </div>
