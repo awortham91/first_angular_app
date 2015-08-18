@@ -22,6 +22,7 @@ angular.module('Fun').controller('MemoryIndexController', function(User, Note, $
 
   $scope.toggleTime = function(cards) {
     if(!$scope.toggled){
+      console.log("1")
       var card = Note.get({id: cards}, function() {
         if(checkForCards(card.id)){
           document.getElementById(cards).innerHTML = card["description"]
@@ -30,6 +31,7 @@ angular.module('Fun').controller('MemoryIndexController', function(User, Note, $
         };
       });
     } else if($scope.toggled && !$scope.ready) {
+      console.log("2")
       var card = Note.get({id: cards}, function() {
         if(checkForCards(card.id)){
           document.getElementById(cards).innerHTML = card["description"]
@@ -40,12 +42,15 @@ angular.module('Fun').controller('MemoryIndexController', function(User, Note, $
               matchedCards.push(firstCard.id)
               document.getElementById(card.id).className = "memory_index_correct";
               document.getElementById(firstCard.id).className = "memory_index_corrct";
+              $scope.toggled = false;
+              $scope.ready = false;
             }
           });
           chosenCards = []
         };
       });
     } else {
+      console.log("3")
       x = document.getElementsByClassName("memory_index_card_quote")
       for (var i = 0, len = x.length; i < len; i++) {
         x[i].innerHTML = "pick me!"
