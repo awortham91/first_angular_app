@@ -1,18 +1,67 @@
 angular.module("Fun").filter('noteMemoryFilter', function(){
   return function(collection) {
-    var newCollection = [];
-    var newUsers = [];
-    while (newCollection < 8) {
-      var newNum = Math.floor(Math.random() * collection.length)
-      if ($.inArray(newNum, newCollection < 0)) {
-        newCollection.push(newNum);
-      };
+
+    function uniq(array) {
+      var result = [];
+      for (var i = 0; i < array.length; i++) {
+          if (result.indexOf(array[i]) == -1) {
+              result.push(array[i]);
+          }
+      }
+      return result;
     };
 
-    for(var i=0; i < newCollection.length; i++) {
-      newUsers.push(collection[newCollection[i]]);
+
+    // function shuffle(array) {
+    //   var m = array.length, t, i;
+    //
+    //   while (m) {
+    //     i = Math.floor(Math.random() * m--);
+    //
+    //     t = array[m];
+    //     array[m] = array[i];
+    //     array[i] = t;
+    //   }
+    //   return array;
+    // }
+
+    function shuffle(array) {
+      var l = array.length
+      var editedArray = array;
+      var result = [];
+      for (var i = 0; i < l; i++) {
+        random = Math.floor(Math.random() * editedArray.length);
+        result.push(editedArray[random]);
+        editedArray.splice(random, 1);
+      }
+      return result
     };
-var newCollection = [1,2,3,4]
-    return newCollection;
-  };
+
+    var notes = collection
+    var userIds = [];
+    var l = notes.length
+    for (i = 0; i < l; i++) {
+      userIds.push(notes[i].userId);
+    };
+    var userIds = shuffle(uniq(userIds)).slice(0, 8);
+    var scrambledNotes = shuffle(notes)
+
+    // var newCollection = [];
+    //
+    // for (i = 0; i < 16; i++) {
+    //   var l = array.length
+    //   var newNum = Math.floor(Math.random() * l)
+    //   newCollection.push(array[newNum]);
+    //   array.splice(newNum, 1);
+    // }
+
+  //   var newish = [];
+    // for (i = 0; i < 16; i++) {
+  //     var newNum = collection[i]
+  //     console.log(collection[i].userId)
+  //     newish.push(newNum);
+  //   }
+  console.log(scrambledNotes)
+    return collection;
+  }
 });
