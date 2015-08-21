@@ -1,12 +1,48 @@
 angular.module('Fun').controller('MemoryIndexController', function(User, Note, $scope){
   var allUsers = User.query();
   $scope.users = allUsers
-  var allNotes = Note.query();
-  $scope.notes = allNotes
+  var allNotes = Note.query(function(data) {
+
+
+
   $scope.toggled = false;
   $scope.ready = false;
   var chosenCards = []
   var matchedCards = []
+
+  function uniq(array) {
+    var result = [];
+    for (var i = 0; i < array.length; i++) {
+        if (result.indexOf(array[i]) == -1) {
+            result.push(array[i]);
+        }
+    }
+    return result;
+  };
+
+  function shuffle(array) {
+    var l = array.length
+    var editedArray = array;
+    var result = [];
+    for (var i = 0; i < l; i++) {
+      random = Math.floor(Math.random() * editedArray.length);
+      result.push(editedArray[random]);
+      editedArray.splice(random, 1);
+    }
+    return result
+  };
+
+  var userIds = [];
+  var l = allNotes.length
+  for (i = 0; i < l; i++) {
+    userIds.push(allNotes[i].userId);
+  };
+  var userIds = shuffle(uniq(userIds)).slice(0, 8);
+  var scrambledNotes = shuffle(allNotes)
+  $scope.notes = scrambledNotes
+  console.log(l)
+  console.log(allNotes)
+
 
   function makeAllFalse() {
     $scope.toggled = false;
@@ -84,4 +120,5 @@ angular.module('Fun').controller('MemoryIndexController', function(User, Note, $
       makeAllFalse()
     }
   }
+  })
 });
