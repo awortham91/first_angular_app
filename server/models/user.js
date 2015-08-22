@@ -9,8 +9,8 @@ var users = [
   {"id": 6,  "email": "mail@zdn.me", "username": "zach", "name": "Julius Caesar", "bio": "Bio sections always intimidate me. I can never think of anything to say that will achieve that awe inspiring effect I want it to have.", "twitter_handle": "@turtleguyy", "site": "zacharynicoll.com"},
   {"id": 7,  "email": "adamrensel@codeschool.com", "username": "renz", "name": "King Henry","bio": "Web Developer at @envylabs and @codeschool", "twitter_handle": "@adamrensel", "site": "adamrensel.com"},
   {"id": 8,  "email": "olivier@codeschool.com", "username": "OlivierLacan","name": "Macbeth","bio": "Software bricoleur at @codeschool, word wrangler, scientific skeptic, and logic lumberjack.","twitter_handle": "@olivierlacan","site": "olivierlacan.com"},
-  {"id": 11, "email": "drew@codeschool.com",  "username": "DrewBarontini", "name": "Drew Barontini", "bio": "Front-end developer @codeschool, descendant of @envylabs, real-life extrovert, internet introvert.", "twitter_handle": "@drewbarontini", "site": "drewbarontini.com"},
-  {"id": 12, "email": "jordan@codeschool.com",  "username": "JordanWade", "name": "Jordan Wade", "bio": "Designer, Illustrator, and Front-End Developer @codeschool", "twitter_handle": "@jjordanwade", "site": "jamesjordanwade.com"},
+  {"id": 9, "email": "drew@codeschool.com",  "username": "DrewBarontini", "name": "Edgar", "bio": "Front-end developer @codeschool, descendant of @envylabs, real-life extrovert, internet introvert.", "twitter_handle": "@drewbarontini", "site": "drewbarontini.com"},
+  {"id": 10, "email": "jordan@codeschool.com",  "username": "JordanWade", "name": "Hermione", "bio": "Designer, Illustrator, and Front-End Developer @codeschool", "twitter_handle": "@jjordanwade", "site": "jamesjordanwade.com"},
   {"id": 13, "email": "alyssa@codeschool.com",  "username": "AlyssaNicoll", "name": "Alyssa Nicoll", "bio": "Code School Teacher. Angular Lover. Scuba Diver.", "twitter_handle": "@AlyssaNicoll", "site": "alyssa.io"}
 ];
 

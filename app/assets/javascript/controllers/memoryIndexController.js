@@ -39,10 +39,22 @@ angular.module('Fun').controller('MemoryIndexController', function(User, Note, $
   };
   var userIds = shuffle(uniq(userIds)).slice(0, 8);
   var scrambledNotes = shuffle(allNotes)
-  $scope.notes = scrambledNotes
-  console.log(l)
-  console.log(allNotes)
+  var memoryNotes = []
 
+  var first = false
+  for (var i = 0; i < userIds.length; i++) {
+    for (var j = 0; j < scrambledNotes.length; j++) {
+      if(userIds[i] === scrambledNotes[j].userId && first === false) {
+        memoryNotes.push(scrambledNotes[j])
+      } else if (userIds[i] === scrambledNotes[j].userId && first === true) {
+        memoryNotes.push(scrambledNotes[j])
+        first = false
+        break
+      };
+    };
+  };
+
+  $scope.notes = shuffle(memoryNotes)
 
   function makeAllFalse() {
     $scope.toggled = false;

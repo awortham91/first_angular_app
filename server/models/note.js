@@ -17,7 +17,11 @@ var notes = [
   {"id":13, "userId": 7, "categoryId": 7, "description" : "Every subject’s duty is the king’s; but every subject’s soul is his own.", "content" : "violently versus the unluck by ending your own life.", "title" : "to be 6"},
   {"id":14, "userId": 7, "categoryId": 7, "description" : "For when lenity and cruelty play for a kingdom, the gentler gamester is the soonest winner.", "content" : "violently versus the unluck by ending your own life.", "title" : "to be 6"},
   {"id":15, "userId": 8, "categoryId": 8, "description" : "It will have blood; they say, blood will have blood: Stones have been known to move and trees to speak.", "content" : "violently versus the unluck by ending your own life.", "title" : "to be 6"},
-  {"id":16, "userId": 8, "categoryId": 8, "description" : "To be thus is nothing, but to be safely thus.", "content" : "violently versus the unluck by ending your own life.", "title" : "to be 6"}
+  {"id":16, "userId": 8, "categoryId": 8, "description" : "To be thus is nothing, but to be safely thus.", "content" : "violently versus the unluck by ending your own life.", "title" : "to be 6"},
+  {"id":17, "userId": 9, "categoryId": 1, "description" : "You are now within a foot of th' extreme verge.", "content" : "violently versus the unluck by ending your own life.", "title" : "to be 6"},
+  {"id":18, "userId": 9, "categoryId": 1, "description" : "Ten masts at each make not the altitude which thou hast perpendicularly fell. Thy life's a miracle.", "content" : "violently versus the unluck by ending your own life.", "title" : "to be 6"},
+  {"id":19, "userId": 10, "categoryId": 2, "description" : "I never wished to see you sorry; now I trust I shall.", "content" : "violently versus the unluck by ending your own life.", "title" : "to be 6"},
+  {"id":20, "userId": 10, "categoryId": 2, "description" : "My life stands in the level of your dreams...", "content" : "violently versus the unluck by ending your own life.", "title" : "to be 6"}
 
 
 ]
